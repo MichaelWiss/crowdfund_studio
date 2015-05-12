@@ -15,11 +15,11 @@
       </tr>
       <tr>
         <th>Website:</th>
-        <td><%= project.website %></td>
+        <td><%= link_to(project.website) %></td>
       </tr>
       <tr>
         <th>Pledging Ends:</th>
-        <td><%= project.pledging_ends_on %></td>
+        <td><%= project.pledging_ends_on.to_datetime.strftime('%m/%d/%Y') %></td>
       </tr>
     </table>
   </article>
