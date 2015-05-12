@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511215017) do
+ActiveRecord::Schema.define(version: 20150512175111) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20150511215017) do
     t.decimal  "target_pledge_amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "website"
+    t.string   "string"
+    t.string   "pledging_ends_on"
+    t.string   "date"
   end
 
 end
