@@ -1,4 +1,4 @@
-<h1>Projects</h1>
+<h1><%= pluralize(@projects.size, 'Project') %></h1>
 
 <% @projects.each do |project| %>
   <article>
@@ -6,7 +6,7 @@
       <h2><%= project.name %></h2>
     </header>
     <p>
-      <%= project.description %>
+      <%= truncate(project.description, length: 150, seperator: ' ') %>
     </p>
     <table>
       <tr>
@@ -19,7 +19,7 @@
       </tr>
       <tr>
         <th>Pledging Ends:</th>
-        <td><%= project.pledging_ends_on.to_datetime.strftime('%m/%d/%Y') %></td>
+        <td><%= format_pledging_ends_on(project) %></td>
       </tr>
     </table>
   </article>
